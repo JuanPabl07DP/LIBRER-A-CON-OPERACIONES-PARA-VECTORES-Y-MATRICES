@@ -1,5 +1,6 @@
 #Juan Pablo Daza Pereira
 #CNYT
+import math
 def suma(c1, c2):
 
     return [c1[0] + c2[0], c1[1] + c2[1]]
@@ -82,7 +83,7 @@ def potencia_n(c1,n):
     elif n == 1:
         return c1
 
-import math
+
 "V: vectores"
 "M: matrices"
 
