@@ -1,5 +1,5 @@
 #Juan Pablo Daza Pereira
-#CNYT
+#CNYT.
 import math
 def suma(c1, c2):
 
