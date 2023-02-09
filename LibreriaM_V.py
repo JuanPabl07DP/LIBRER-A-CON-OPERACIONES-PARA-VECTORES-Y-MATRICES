@@ -83,7 +83,7 @@ def potencia_n(c1,n):
     elif n == 1:
         return c1
 
-
+#--------------------------------------Libreria con operaciones para vectores y matrices------------------------------------------------------
 "V: vectores"
 "M: matrices"
 
