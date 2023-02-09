@@ -1,6 +1,8 @@
 #Juan Pablo Daza Pereira
 #CNYT.
 import math
+
+#-------------------------------------Libreria de números complejos-----------------------------
 def suma(c1, c2):
 
     return [c1[0] + c2[0], c1[1] + c2[1]]
@@ -86,7 +88,7 @@ def potencia_n(c1,n):
 #--------------------------------------Libreria con operaciones para vectores y matrices------------------------------------------------------
 "V: vectores"
 "M: matrices"
-
+#1
 def sumaV(v1, v2):
 
     res = []
@@ -97,7 +99,7 @@ def sumaV(v1, v2):
     else:
         return "Syntax Error"
 
-
+#2
 def restaV(v1, v2):
 
     res = []
@@ -108,7 +110,7 @@ def restaV(v1, v2):
     else:
         return "Syntax Error"
 
-
+#3
 def inversoAditivoV(v1):
 
     res = []
@@ -116,7 +118,7 @@ def inversoAditivoV(v1):
         res.append(producto(v1[i][0], [-1, 0]))
     return res
 
-
+#4
 def productoEscalarV(v1, ec1):
 
     res = []
@@ -125,7 +127,7 @@ def productoEscalarV(v1, ec1):
             res.append(producto(v1[i][0], ec1))
     return res
 
-
+#5
 def adicionM(m1, m2):
 
     res = []
@@ -137,7 +139,7 @@ def adicionM(m1, m2):
     else:
         return "Syntax Error"
 
-
+#6
 def inversoAditivoM(m1):
 
     res = []
@@ -146,7 +148,7 @@ def inversoAditivoM(m1):
             res.append(producto(m1[i][j], [-1, 0]))
     return res
 
-
+#7
 def productoEscalarM(m1, ec1):
 
     res = []
@@ -155,7 +157,7 @@ def productoEscalarM(m1, ec1):
             res.append(producto(m1[i][j], ec1))
     return res
 
-
+#8
 def transpuestaMV(m1):
 
     filas = len(m1)
@@ -167,7 +169,7 @@ def transpuestaMV(m1):
             m2[j][i] = m1[i][j]
     return m2
 
-
+#9
 def conjugadoMV(m1):
 
     for i in range(len(m1)):
@@ -175,12 +177,12 @@ def conjugadoMV(m1):
             m1[i][j] = conjugado(m1[i][j])
     return m1
 
-
+#10
 def dagaMV(m1):
 
     return transpuestaMV(conjugadoMV(m1))
 
-
+#11
 def productoM(m1, m2):
 
     filasm1, filasm2 = len(m1), len(m2)
@@ -195,30 +197,30 @@ def productoM(m1, m2):
     else:
         return "Syntax Error"
 
-
+#12
 def accionMV(m1, v2):
 
     return productoM(m1, v2)
-
+#13
 def productoInterno(v1,v2):
 
     return productoM(dagaMV(v1),v2)
 
-
+#14
 def normaV(v1):
 
     x = productoInterno(v1, v1)
     complejo = [x[0][0][0], x[0][0][1]]
     return modulo(complejo)
 
-
+#15
 def distanciaV(v1,v2):
 
     resta = restaV(v1,v2)
     res = normaV(resta)
     return res
 
-
+#16
 def unitariaM(m1):
 
     filas = len(m1)
@@ -230,7 +232,7 @@ def unitariaM(m1):
     else:
         return False
 
-
+#17
 def hermitianaM(m1):
 
     if dagaMV(m1) == m1:
@@ -238,7 +240,7 @@ def hermitianaM(m1):
     else:
         return False
 
-
+#18
 def productoTensorialM(m1, m2):
 
     filasm1, filasm2 = len(m1), len(m2)
